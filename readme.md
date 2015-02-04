@@ -6,7 +6,7 @@ stepFn is a async function callback.
 
 ### a example
 ```
-(function($){
+(function($, stepFn){
     var ajaxStep;
 
     function onAjaxStep(temp, json){
@@ -23,5 +23,5 @@ stepFn is a async function callback.
     $.get('./assets/temp/data.json', function(data){
             ajaxStep('data', data);
         });
-})(window.jQuery);
+})(window.jQuery, window.stepFn);
 ```
